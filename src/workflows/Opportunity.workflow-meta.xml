@@ -11,4 +11,14 @@
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/CommerceReorderPortalInvitation</template>
     </alerts>
+    <rules>
+        <fullName>Task assignment on large opportunities</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Amount</field>
+            <operation>greaterThan</operation>
+            <value>500000</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
 </Workflow>
