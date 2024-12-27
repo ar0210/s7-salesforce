@@ -17,7 +17,7 @@
         <criteriaItems>
             <field>Opportunity.Amount</field>
             <operation>greaterThan</operation>
-            <value>500000</value>
+            <value>5000000</value>
         </criteriaItems>
         <triggerType>onAllChanges</triggerType>
     </rules>
