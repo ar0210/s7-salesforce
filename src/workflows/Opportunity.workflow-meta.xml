@@ -12,6 +12,21 @@
         <template>unfiled$public/CommerceReorderPortalInvitation</template>
     </alerts>
     <rules>
+        <fullName>Opportunities in Negotiation%2FReview for 30 days</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Negotiation/Review</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Amount</field>
+            <operation>greaterThan</operation>
+            <value>100000</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>Task assignment on large opportunities</fullName>
         <active>true</active>
         <criteriaItems>
