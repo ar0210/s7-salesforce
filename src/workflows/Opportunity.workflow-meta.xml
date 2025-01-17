@@ -22,14 +22,13 @@
         <criteriaItems>
             <field>Opportunity.Amount</field>
             <operation>greaterThan</operation>
-            <value>100000</value>
-            
+            <value>100000</value>     
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
         <fullName>Task assignment on large opportunities</fullName>
-        <active>false</active>
+        <active>true</active>
         <criteriaItems>
             <field>Opportunity.Amount</field>
             <operation>greaterThan</operation>
