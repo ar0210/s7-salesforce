@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Mark_as_VIP</fullName>
+        <field>VIP_Status__c</field>
+        <literalValue>1</literalValue>
+        <name>Mark as VIP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>High Revenue Accounts</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.AnnualRevenue</field>
+            <operation>greaterThan</operation>
+            <value>1000000</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>
